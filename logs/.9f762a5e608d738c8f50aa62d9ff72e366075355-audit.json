@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\RemoteIntegrity\\File System\\backend\\logs\\.9f762a5e608d738c8f50aa62d9ff72e366075355-audit.json",
+    "files": [
+        {
+            "date": 1750958976196,
+            "name": "C:\\RemoteIntegrity\\File System\\backend\\logs\\combined-2025-06-26.log",
+            "hash": "b008bdd3ebf6c5e5c748d5ad15b23ceccb94a267a68e2586664491215d206131"
+        }
+    ],
+    "hashType": "sha256"
+}
