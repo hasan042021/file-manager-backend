@@ -1,0 +1,81 @@
+{
+  "Rules": [
+    {
+      "ID": "PermanentLifecycle",
+      "Status": "Enabled",
+      "Filter": {
+        "Tag": {
+          "Key": "lifecycle",
+          "Value": "permanent"
+        }
+      },
+      "Transitions": [
+        {
+          "Days": 30,
+          "StorageClass": "STANDARD_IA"
+        }
+      ]
+    },
+    {
+      "ID": "ShortTermDelete",
+      "Status": "Enabled",
+      "Filter": {
+        "Tag": {
+          "Key": "lifecycle",
+          "Value": "short-term"
+        }
+      },
+      "Expiration": {
+        "Days": 30
+      }
+    },
+    {
+      "ID": "ArchiveRule",
+      "Status": "Enabled",
+      "Filter": {
+        "Tag": {
+          "Key": "lifecycle",
+          "Value": "archive-ready"
+        }
+      },
+      "Transitions": [
+        {
+          "Days": 90,
+          "StorageClass": "GLACIER_IR"
+        },
+        {
+          "Days": 180,
+          "StorageClass": "GLACIER"
+        }
+      ]
+    },
+    {
+      "ID": "FullArchivalRule",
+      "Status": "Enabled",
+      "Filter": {
+        "Tag": {
+          "Key": "lifecycle",
+          "Value": "full-archival"
+        }
+      },
+      "Transitions": [
+        {
+          "Days": 30,
+          "StorageClass": "STANDARD_IA"
+        },
+        {
+          "Days": 90,
+          "StorageClass": "GLACIER_IR"
+        },
+        {
+          "Days": 180,
+          "StorageClass": "GLACIER"
+        },
+        {
+          "Days": 365,
+          "StorageClass": "DEEP_ARCHIVE"
+        }
+      ]
+    }
+  ]
+}

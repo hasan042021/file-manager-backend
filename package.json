@@ -8,6 +8,7 @@
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
+    "apply:s3-lifecycle": "ts-node scripts/applyLifecycleRules.ts",
     "lint": "eslint \"src/**/*.{ts,js}\"",
     "lint:fix": "eslint \"src/**/*.{ts,js}\" --fix",
     "prettier": "prettier --write \"src/**/*.{ts,js,json,md}\"",

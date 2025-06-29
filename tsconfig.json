@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "ES2022",
-    "lib": ["ES2022"],
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
@@ -14,14 +13,13 @@
     "baseUrl": "./",
     "paths": {
       "@config/*": ["./src/config/*"],
-      "@controllers/*": ["./src/controller"],
-      "@services/*": ["./src/service"],
-      "@repositories/*": ["./src/repository"],
+      "@controllers/*": ["./src/controllers/*"],
+      "@services/*": ["./src/services/*"],
+      "@repositories/*": ["./src/repositories/*"],
       "@routes/*": ["./src/routes/*"],
       "@middlewares/*": ["./src/middlewares/*"],
       "@utils/*": ["./src/utils/*"],
       "@logger": ["./src/logger.ts"],
-      "@versions/*": ["./src/apiServices/*"],
       "@typedefs/*": ["./src/typedefs/*"]
     },
 
